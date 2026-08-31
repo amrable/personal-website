@@ -482,3 +482,21 @@ p, li {
   letter-spacing: 0.015em;
   color: var(--tertiary);
 }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.015em;
+  color: var(--tertiary);
+}
+
+.social-links a {
+  color: var(--tertiary);
+}
+
+.social-links a:hover {
+  color: var(--foreground);
+}
