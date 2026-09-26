@@ -15,11 +15,15 @@
   --gold-tint: #faf5e1;
   --gold-accent: #b4890a;
 
-  /* Section accent squares */
+  /* Section accent squares — four evenly spaced hues (≈90° apart) */
+  --accent-red: hsl(12 70% 55%);
+  --accent-green: hsl(102 50% 45%);
+  --accent-cyan: hsl(192 65% 48%);
+  --accent-violet: hsl(282 55% 58%);
+
+  /* Scope markers (Competitions list + legend) */
   --accent-orange: #e94f2a;
   --accent-blue: #376bef;
-  --accent-coral: #f26522;
-  --accent-green: #2e9e5b;
 
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -171,7 +175,7 @@ p, li {
 
 /* Work section */
 .work {
-  padding: 0 0 2rem;
+  padding: 0 0 6rem;
 }
 
 .work-blurb {
@@ -202,19 +206,95 @@ p, li {
   width: 5px;
   height: 5px;
   border-radius: 1.5px;
-  background: var(--section-accent, var(--accent-orange));
+  background: var(--section-accent, var(--accent-red));
 }
 
 .section-label--highlights {
-  --section-accent: var(--accent-orange);
+  --section-accent: var(--accent-red);
 }
 
 .section-label--work {
   --section-accent: var(--accent-green);
 }
 
+.section-label--products {
+  --section-accent: var(--accent-cyan);
+}
+
 .section-label--achievements {
-  --section-accent: var(--accent-blue);
+  --section-accent: var(--accent-violet);
+}
+
+/* Product list */
+.products {
+  padding: 0 0 6rem;
+}
+
+.product-list {
+  list-style: none;
+}
+
+.product-list li + li {
+  margin-top: 0.25rem;
+}
+
+.product-card {
+  display: grid;
+  gap: 0.25rem;
+  min-height: 2.75rem;
+  margin: 0 -0.5rem;
+  padding: 0.625rem 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  background-color: var(--fill);
+}
+
+@media (min-width: 640px) {
+  .product-card {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 1.25rem;
+  }
+}
+
+.product-label {
+  display: grid;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.product-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.product-domain {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+  color: var(--tertiary);
+}
+
+.product-desc {
+  max-width: 62ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+.product-card:hover .product-name {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.product-card:hover .product-domain {
+  color: var(--secondary);
 }
 
 /* Timeline with aligned columns */
@@ -450,7 +530,16 @@ p, li {
   color: var(--foreground);
 }
 
-/* Staggered sections on large screens */
+/* Base spacing for sections that are only padded, not laid out */
+.highlights {
+  padding: 0 0 6rem;
+}
+
+.achievements {
+  padding: 0 0 8rem;
+}
+
+/* Shared content column on large screens: one left edge, width by measure */
 @media (min-width: 1024px) {
   .intro {
     margin-left: 16.6667%;
@@ -461,17 +550,23 @@ p, li {
   .work {
     margin-left: 16.6667%;
     width: 58.3333%;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
+  }
+
+  .products {
+    margin-left: 16.6667%;
+    width: 58.3333%;
+    padding-bottom: 8rem;
   }
 
   .highlights {
-    margin-left: 25%;
-    width: 50%;
+    margin-left: 16.6667%;
+    width: 58.3333%;
     padding-bottom: 8rem;
   }
 
   .achievements {
-    margin-left: 8.3333%;
+    margin-left: 16.6667%;
     width: 75%;
     padding-bottom: 10rem;
   }
@@ -480,14 +575,6 @@ p, li {
     margin-left: 16.6667%;
     width: 66.6667%;
   }
-}
-
-.highlights {
-  padding: 2rem 0 6rem;
-}
-
-.achievements {
-  padding-bottom: 7rem;
 }
 
 /* Footer */
