@@ -6,172 +6,237 @@
   <meta name="description" content="Competitive programmer and software engineer. IEEEXtreme, ICPC, and Meta Hacker Cup results.">
   <title>Amr Fahmy</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="preload" href="fonts/geist-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/geist-sans-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-  <div class="container">
-    <header class="site-header">
-      <p class="site-name"><a href="/">Amr Fahmy</a></p>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <main>
-      <section class="intro">
-        <h1 class="sr-only">Amr Fahmy</h1>
-        <p class="intro-lead">i can run your server faster and cheaper</p>
-      </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="/">Amr Fahmy</a>
+      <div class="nav-cluster">
+        <nav id="site-nav" class="site-nav" aria-label="Sections">
+          <a href="#work">Work</a>
+          <a href="#products">Products</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#results">Results</a>
+        </nav>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon icon-list" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>
+          <svg class="icon icon-x" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <section class="work" aria-labelledby="work-heading">
-        <h2 class="section-label section-label--work" id="work-heading">Work</h2>
-        <p class="work-blurb">software engineer at <a href="https://toralarm.com/" target="_blank" rel="noopener"><strong>TorAlarm</strong></a>.</p>
-      </section>
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-name">
+      <h1 class="sr-only" id="intro-name">Amr Fahmy</h1>
+      <div class="container">
+        <p class="intro-lead">i can run your server <span class="hl">faster and cheaper</span></p>
+        <p class="intro-sub">Software engineer, competitive programmer, and maker of small products that stay fast.</p>
+        <div class="intro-actions">
+          <a class="btn btn--primary" href="#results">See results</a>
+          <a class="btn btn--ghost" href="https://github.com/amrable" target="_blank" rel="noopener">
+            GitHub
+            <svg class="icon" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <section class="products" aria-labelledby="products-heading">
-        <h2 class="section-label section-label--products" id="products-heading">Products</h2>
-        <ul class="product-list">
-          <li>
-            <a class="product-card" href="https://breedbook.net/" target="_blank" rel="noopener">
-              <span class="product-label">
-                <span class="product-name">BreedBook</span>
-                <span class="product-domain">breedbook.net</span>
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <h2 class="section-title" id="work-heading" data-reveal>Work</h2>
+        <p class="work-statement" data-reveal>Software engineer at <a href="https://toralarm.com/" target="_blank" rel="noopener">TorAlarm</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="products" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title" id="products-heading">Products</h2>
+          <p class="section-lede">Two products I build and maintain.</p>
+        </div>
+        <ul class="product-grid">
+          <li data-reveal>
+            <a class="product" href="https://breedbook.net/" target="_blank" rel="noopener">
+              <span class="product-top">
+                <span class="product-head">
+                  <img class="product-favicon" src="icons/breedbook.png" width="28" height="28" alt="" loading="lazy" decoding="async">
+                  <span class="product-name">BreedBook</span>
+                </span>
+                <svg class="icon" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
               </span>
-              <span class="product-desc">Private stud-book software for Arabian horse breeders — pedigrees up to five generations, season breeding plans, and presentation links you send yourself.</span>
+              <span class="product-domain">breedbook.net</span>
+              <span class="product-desc">Private stud-book software for Arabian horse breeders. Pedigrees up to five generations, season breeding plans, and presentation links you send yourself.</span>
             </a>
           </li>
-          <li>
-            <a class="product-card" href="https://miner.amrable.com/" target="_blank" rel="noopener">
-              <span class="product-label">
-                <span class="product-name">miner</span>
-                <span class="product-domain">miner.amrable.com</span>
+          <li data-reveal>
+            <a class="product" href="https://miner.amrable.com/" target="_blank" rel="noopener">
+              <span class="product-top">
+                <span class="product-head">
+                  <img class="product-favicon" src="icons/miner.png" width="28" height="28" alt="" loading="lazy" decoding="async">
+                  <span class="product-name">miner</span>
+                </span>
+                <svg class="icon" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
               </span>
+              <span class="product-domain">miner.amrable.com</span>
               <span class="product-desc">A small app for learning German vocabulary, one word at a time.</span>
             </a>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <section class="highlights" aria-labelledby="highlights-heading">
-        <h2 class="section-label section-label--highlights" id="highlights-heading">Highlights</h2>
-        <div class="video-grid">
-          <a class="video-card" href="https://youtu.be/iShl5UTCYfo" target="_blank" rel="noopener">
-            <img src="https://i.ytimg.com/vi/iShl5UTCYfo/mqdefault.jpg" alt="Codeforces Round #640 Div 4 accepted codes" loading="lazy">
-            <span class="video-body">
-              <span class="video-title">Codeforces Round #640 Div 4 Accepted codes + illustrations</span>
-              <span class="video-caption">5.7K views</span>
-            </span>
-          </a>
-          <a class="video-card" href="https://youtu.be/mw_Xs__t16A" target="_blank" rel="noopener">
-            <img src="https://i.ytimg.com/vi/mw_Xs__t16A/mqdefault.jpg" alt="Algorithm mock interview with a software engineer" loading="lazy">
-            <span class="video-body">
+    <section class="section" id="highlights" aria-labelledby="highlights-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title" id="highlights-heading">Highlights</h2>
+          <p class="section-lede">Algorithm walkthroughs and mock interviews, mostly in Arabic.</p>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="video-rail" data-reveal>
+          <li>
+            <a class="video" href="https://youtu.be/mw_Xs__t16A" target="_blank" rel="noopener">
+              <span class="video-thumb">
+                <img src="https://i.ytimg.com/vi/mw_Xs__t16A/hqdefault.jpg" width="480" height="360" alt="Algorithm mock interview with a software engineer" loading="lazy" decoding="async">
+              </span>
               <span class="video-title">Algorithm Mock Interview With A Software Engineer [In Arabic] #4</span>
-              <span class="video-caption">2.3K views</span>
-            </span>
-          </a>
-          <a class="video-card" href="https://youtu.be/2YxjIJ1wFQQ" target="_blank" rel="noopener">
-            <img src="https://i.ytimg.com/vi/2YxjIJ1wFQQ/mqdefault.jpg" alt="Bit manipulation introduction" loading="lazy">
-            <span class="video-body">
+              <span class="video-meta">2.3K views</span>
+            </a>
+          </li>
+          <li>
+            <a class="video" href="https://youtu.be/2YxjIJ1wFQQ" target="_blank" rel="noopener">
+              <span class="video-thumb">
+                <img src="https://i.ytimg.com/vi/2YxjIJ1wFQQ/hqdefault.jpg" width="480" height="360" alt="Bit manipulation introduction" loading="lazy" decoding="async">
+              </span>
               <span class="video-title">Bit Manipulation introduction + Leetcode examples in Arabic</span>
-              <span class="video-caption">1.8K views</span>
-            </span>
-          </a>
-          <a class="video-card" href="https://youtu.be/YKDpTulKcLY" target="_blank" rel="noopener">
-            <img src="https://i.ytimg.com/vi/YKDpTulKcLY/mqdefault.jpg" alt="CF514B Div 2 Han Solo and Lazer Gun" loading="lazy">
-            <span class="video-body">
-              <span class="video-title">CF514B - Div 2 - Han Solo and Lazer Gun (Arabic)</span>
-              <span class="video-caption">1.6K views</span>
-            </span>
-          </a>
-          <a class="video-card" href="https://youtube.com/live/OWjciYuhmP4" target="_blank" rel="noopener">
-            <img src="https://i.ytimg.com/vi/OWjciYuhmP4/mqdefault.jpg" alt="Codeforces easy problems 1" loading="lazy">
-            <span class="video-body">
+              <span class="video-meta">1.8K views</span>
+            </a>
+          </li>
+          <li>
+            <a class="video" href="https://youtu.be/YKDpTulKcLY" target="_blank" rel="noopener">
+              <span class="video-thumb">
+                <img src="https://i.ytimg.com/vi/YKDpTulKcLY/hqdefault.jpg" width="480" height="360" alt="CF514B Div 2 Han Solo and Lazer Gun" loading="lazy" decoding="async">
+              </span>
+              <span class="video-title">CF514B, Div 2, Han Solo and Lazer Gun (Arabic)</span>
+              <span class="video-meta">1.6K views</span>
+            </a>
+          </li>
+          <li>
+            <a class="video" href="https://youtube.com/live/OWjciYuhmP4" target="_blank" rel="noopener">
+              <span class="video-thumb">
+                <img src="https://i.ytimg.com/vi/OWjciYuhmP4/hqdefault.jpg" width="480" height="360" alt="Codeforces easy problems 1" loading="lazy" decoding="async">
+              </span>
               <span class="video-title">Codeforces easy problems #1</span>
-              <span class="video-caption">1.4K views</span>
-            </span>
+              <span class="video-meta">1.4K views</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results" aria-labelledby="results-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title" id="results-heading">Competitions</h2>
+          <p class="section-lede">Selected results from ICPC, IEEEXtreme, and Meta Hacker Cup.</p>
+        </div>
+
+        <div class="stat-band">
+          <a class="stat" href="https://certificate.ieeextreme.org/generate-email-certificate/v3Gro8rhwRdtx7" target="_blank" rel="noopener" data-reveal>
+            <span class="stat-kicker">IEEEXtreme 15.0 &middot; 2021</span>
+            <span class="stat-value">23 / 12,900</span>
+            <span class="stat-foot"><span class="stat-pct">top 0.18%</span><span class="tag">Global</span></span>
+          </a>
+          <a class="stat" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener" data-reveal>
+            <span class="stat-kicker">ICPC Egyptian CPC &middot; 2023</span>
+            <span class="stat-value">13 / 236</span>
+            <span class="stat-foot"><span class="stat-pct">top 5.5%</span><span class="tag">Regional</span></span>
+          </a>
+          <a class="stat" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener" data-reveal>
+            <span class="stat-kicker">ICPC Africa &amp; Arab &middot; 2024</span>
+            <span class="stat-value">35 / 116</span>
+            <span class="stat-foot"><span class="stat-pct">top 30.2%</span><span class="tag">Regional</span></span>
           </a>
         </div>
-      </section>
 
-      <section class="achievements" aria-labelledby="achievements-heading">
-        <h2 class="section-label section-label--achievements" id="achievements-heading">Competitions</h2>
-        <p class="scope-legend" aria-label="Competition scope legend">
-          <span class="scope-legend-item scope-legend-item--global">Global</span>
-          <span class="scope-legend-item scope-legend-item--regional">Regional</span>
-        </p>
-        <ol class="timeline">
-          <li>
-            <a class="tl-entry" data-scope="regional" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
-              <span class="tl-date">Mar 2024</span>
-              <span class="tl-title">ICPC Africa &amp; Arab Championship</span>
-              <span class="tl-rank">35 / 116 · top 30.2%</span>
+        <ol class="ledger">
+          <li data-reveal>
+            <a class="result" href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/certificate/1210279012655513" target="_blank" rel="noopener">
+              <span class="result-date">Oct 2023</span>
+              <span class="result-title">Meta Hacker Cup</span>
+              <span class="result-rank">769th place</span>
+              <span class="tag">Global</span>
             </a>
           </li>
-          <li>
-            <a class="tl-entry" data-scope="global" href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/certificate/1210279012655513" target="_blank" rel="noopener">
-              <span class="tl-date">Oct 2023</span>
-              <span class="tl-title">Meta Hacker Cup</span>
-              <span class="tl-rank">769th place</span>
+          <li data-reveal>
+            <a class="result" href="https://www.facebook.com/codingcompetitions/hacker-cup/2022/certificate/1210279012655513" target="_blank" rel="noopener">
+              <span class="result-date">Sep 2022</span>
+              <span class="result-title">Meta Hacker Cup</span>
+              <span class="result-rank">1,865th place</span>
+              <span class="tag">Global</span>
             </a>
           </li>
-          <li>
-            <a class="tl-entry tl-entry--medal" data-scope="regional" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
-              <span class="tl-date">Aug 2023</span>
-              <span class="tl-title">ICPC Egyptian Collegiate Programming Contest 🥉</span>
-              <span class="tl-rank">13 / 236 · top 5.5%</span>
+          <li data-reveal>
+            <a class="result" href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/certificate/1210279012655513" target="_blank" rel="noopener">
+              <span class="result-date">Sep 2021</span>
+              <span class="result-title">Meta Hacker Cup</span>
+              <span class="result-rank">1,929th place</span>
+              <span class="tag">Global</span>
             </a>
           </li>
-          <li>
-            <a class="tl-entry" data-scope="global" href="https://www.facebook.com/codingcompetitions/hacker-cup/2022/certificate/1210279012655513" target="_blank" rel="noopener">
-              <span class="tl-date">Sep 2022</span>
-              <span class="tl-title">Meta Hacker Cup</span>
-              <span class="tl-rank">1,865th place</span>
+          <li data-reveal>
+            <a class="result" href="https://www.facebook.com/codingcompetitions/hacker-cup/2020/certificate/1210279012655513" target="_blank" rel="noopener">
+              <span class="result-date">Aug 2020</span>
+              <span class="result-title">Meta Hacker Cup</span>
+              <span class="result-rank">986th place</span>
+              <span class="tag">Global</span>
             </a>
           </li>
-          <li>
-            <a class="tl-entry" data-scope="global" href="https://certificate.ieeextreme.org/generate-email-certificate/v3Gro8rhwRdtx7" target="_blank" rel="noopener">
-              <span class="tl-date">Oct 2021</span>
-              <span class="tl-title">IEEEXtreme 15.0</span>
-              <span class="tl-rank">23 / 12,900 · top 0.18%</span>
+          <li data-reveal>
+            <a class="result" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
+              <span class="result-date">Mar 2021</span>
+              <span class="result-title">ICPC Africa &amp; Arab Championship</span>
+              <span class="result-rank">31 / 130</span>
+              <span class="tag">Regional</span>
             </a>
           </li>
-          <li>
-            <a class="tl-entry" data-scope="global" href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/certificate/1210279012655513" target="_blank" rel="noopener">
-              <span class="tl-date">Sep 2021</span>
-              <span class="tl-title">Meta Hacker Cup</span>
-              <span class="tl-rank">1,929th place</span>
-            </a>
-          </li>
-          <li>
-            <a class="tl-entry" data-scope="regional" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
-              <span class="tl-date">Mar 2021</span>
-              <span class="tl-title">ICPC Africa &amp; Arab Championship</span>
-              <span class="tl-rank">31 / 130 · top 23.8%</span>
-            </a>
-          </li>
-          <li>
-            <a class="tl-entry" data-scope="regional" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
-              <span class="tl-date">Nov 2020</span>
-              <span class="tl-title">ICPC Egyptian Collegiate Programming Contest</span>
-              <span class="tl-rank">17 / 139 · top 12.2%</span>
-            </a>
-          </li>
-          <li>
-            <a class="tl-entry" data-scope="global" href="https://www.facebook.com/codingcompetitions/hacker-cup/2020/certificate/1210279012655513" target="_blank" rel="noopener">
-              <span class="tl-date">Aug 2020</span>
-              <span class="tl-title">Meta Hacker Cup</span>
-              <span class="tl-rank">986th place</span>
+          <li data-reveal>
+            <a class="result" href="https://icpc.global/ICPCID/BDYOLTUZYAJF" target="_blank" rel="noopener">
+              <span class="result-date">Nov 2020</span>
+              <span class="result-title">ICPC Egyptian CPC</span>
+              <span class="result-rank">17 / 139</span>
+              <span class="tag">Regional</span>
             </a>
           </li>
         </ol>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer">
-      <p class="footer-meta">© 2026 Amr Fahmy</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-meta">&copy; 2026 Amr Fahmy</p>
       <nav class="social-links" aria-label="Social links">
         <a href="https://www.linkedin.com/in/amrable/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/amrable" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.youtube.com/@amrable" target="_blank" rel="noopener">YouTube</a>
       </nav>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
