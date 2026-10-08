@@ -1,0 +1,12 @@
+# Cloudflare Pages custom headers.
+# The site has no build step, so HTML and CSS/JS can be deployed together but
+# cached independently. HTML revalidates on every load, while the default asset
+# cache is 4 hours — that mismatch paired fresh markup with a stale stylesheet
+# and made the site render unstyled on iOS Safari. Force those files to
+# revalidate so a deploy can never leave visitors on an out-of-date theme.css.
+
+/theme.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/app.js
+  Cache-Control: public, max-age=0, must-revalidate

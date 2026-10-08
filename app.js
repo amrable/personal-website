@@ -38,6 +38,16 @@
     });
   }
 
+  /* ---- Header solidifies once the hero scrolls past ---- */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var syncHeader = function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
+  }
+
   /* ---- Scroll reveal ---- */
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
   if (!els.length) return;

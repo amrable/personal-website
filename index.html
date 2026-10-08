@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Competitive programmer and software engineer. IEEEXtreme, ICPC, and Meta Hacker Cup results.">
   <title>Amr Fahmy</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbf9f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0a0b" media="(prefers-color-scheme: dark)">
   <script>
     (function () {
       document.documentElement.classList.add('js');
     })();
   </script>
+  <meta property="og:title" content="Amr Fahmy">
+  <meta property="og:description" content="Competitive programmer and software engineer. IEEEXtreme, ICPC, and Meta Hacker Cup results.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/cover-sunset.png">
   <link rel="preload" href="fonts/geist-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-sans-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="theme.css">
+  <link rel="preload" href="images/cover-sunset@small.png" as="image"
+        imagesrcset="images/cover-sunset@small.png 1280w, images/cover-sunset.png 1920w"
+        imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="theme.css?v=06eb2751">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,6 +47,13 @@
   </header>
 
   <main id="main">
+    <section class="hero" aria-hidden="true">
+      <img class="hero-img" src="images/cover-sunset.png"
+           srcset="images/cover-sunset@small.png 1280w, images/cover-sunset.png 1920w"
+           sizes="100vw" width="1920" height="960"
+           alt="" fetchpriority="high" decoding="async">
+    </section>
+
     <section class="intro" aria-labelledby="intro-name">
       <h1 class="sr-only" id="intro-name">Amr Fahmy</h1>
       <div class="container">
@@ -237,6 +252,6 @@
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="app.js?v=c7e32214" defer></script>
 </body>
 </html>
